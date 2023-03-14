@@ -44,25 +44,28 @@ section {
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     z-index: 100;
 
 }
 
+
 .logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
+font-size: 30px;
+color: var(--main-color);
+font-weight: 600;
+cursor: default;
 
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+}
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
-    margin-left: 4rem;
-    transition: 2s;
-
+    padding: 14px 28px;
 }
 
 .navbar a:hover,
@@ -74,11 +77,13 @@ section {
 #menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
-    display: none;
 }
 
+                                                                                                                                                                                                                                                                                q
+
+
 .home {
-    display: flex;
+     display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -91,6 +96,8 @@ section {
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
+    line-height: 3.4;
+    
 
 }
 
@@ -132,6 +139,7 @@ span {
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
+
 
 .portfolio {
     background: var(--second-bg-color);
@@ -294,7 +302,6 @@ span {
     box-shadow: 0 03 20px rgba(0,0,0,0.472);
 }
 
-
 .site-content p {
     font-size: 2.5rem;
 }
@@ -332,39 +339,23 @@ span {
     color: var(--second-bg-color);
 }
 
-@media (max-width: 1200px) {
-    html {
-        font-size: 55%;
+
+#toggle {
+    display: none;
+}
+@media screen and (max-width: 700PX) {
+    .navbar {
+        flex-direction: column;
+        display: none;
+    }
+    #toggle:checked + .navbar {
+        display: flex;
     }
 }
 
-@media (max-width: 991px) {
-    .header {
-        padding: 2rem 3% ;
-    }
 
-    section {
-        padding: 10rem 3% 2rem ;
-    }
 
-    .footer {
-        padding: 2rem 3%;
-    }
-} 
 
-.navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg-color);
-    border-top: .1rem solid rgba(0, 0, 0, .2);
-    box-shadow: 0 .5rem rgba(0, 0, 0, .2);
-    
-}
 
-.home {
-    flex-direction: column;
-}
+
 
