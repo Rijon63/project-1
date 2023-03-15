@@ -61,11 +61,22 @@ cursor: default;
 .navbar {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transition: all 0.5s ease;
+
 }
 .navbar a {
-    font-size: 1.7rem;
+    display: block;
+    font-size: 18px;
     color: var(--text-color);
-    padding: 14px 28px;
+    padding: 10px;
 }
 
 .navbar a:hover,
@@ -77,10 +88,45 @@ cursor: default;
 #menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
 }
 
-                                                                                                                                                                                                                                                                                q
+.header:hover .navbar {
+    left: 0;
+}
 
+.header:focus-within .navbar {
+    left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        height: auto;
+        background-color: transparent;
+        left: 0;
+        width: auto;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+}
+
+
+
+                                                                                                                                                                                                                                                                            q
 
 .home {
      display: flex;
@@ -339,19 +385,75 @@ span {
     color: var(--second-bg-color);
 }
 
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%
+    }
+}
 
-#toggle {
-    display: none;
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
 }
-@media screen and (max-width: 700PX) {
-    .navbar {
+
+@media (max-width: 768px) {
+    .navbar .active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
         flex-direction: column;
-        display: none;
     }
-    #toggle:checked + .navbar {
-        display: flex;
+
+    .home-content h3 {
+        font-size: 2.6rem;
     }
-}
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-content {
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+    }
+
+    @media (max-width: 617px) {
+        .portfolio-content {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 450px) {
+        html {
+            font-size: 50%;
+        }
+    }
+     
+
+
+    
 
 
 
