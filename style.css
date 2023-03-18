@@ -31,7 +31,6 @@ body {
 }
 
 section {
-    min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
@@ -44,7 +43,7 @@ section {
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
-    align-items: top;
+    align-items:self-start;
     z-index: 100;
 
 }
@@ -135,8 +134,7 @@ cursor: default;
 }
 
 .home-image img {
-    width: 35vw;
-
+    width: 300px;
 }
 
 .home-content h3 {
@@ -177,7 +175,7 @@ span {
     font-size: 2rem;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
-    transform: .5s ease;
+    
 }
 
 .social-media a :hover {
@@ -212,8 +210,8 @@ span {
 }
 
 .portfolio-box img {
-    width: 100;
-    transition: .5s ease;
+ width: 500px;
+ transition: .5s ease;
 
 }
 
@@ -320,7 +318,7 @@ span {
     border: 1px solid rgb(56,55,55);
     height: 200px;
     border-radius: 3px;
-    padding: 30pxs;
+    padding: 30px;
     transition: 0.6s;
 
 }
@@ -345,14 +343,55 @@ span {
 .workexperience .about-col .about-right-col .about-box:hover {
     border: 1px solid var(--main-color);
     transform: translateY(-7px);
-    box-shadow: 0 03 20px rgba(0,0,0,0.472);
 }
 
-.site-content p {
-    font-size: 2.5rem;
-}
+.sitereport p {
+        font-size: 1.6rem;  
+    }
 
+    h1 {
+    font-size: 36px;
+    margin: 0;
+    }
+    
+    main {
+    padding: 20px;
+    }
+    
+    section {
+    margin-bottom: 30px;
+    }
+    
+    h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+    
+    p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    }
 
+    h3 {
+        font-size: 18px;
+        font-weight: 700;    
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        margin-top: 10px;
+        border-radius: 30px;
+        box-shadow: 0px 4px black;
+    }
+
+    .images {
+        background-color: #323946;
+        box-shadow: 0 0 10px black;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
 .footer {
     display: flex;
     justify-content: space-between;
